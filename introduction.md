@@ -10,13 +10,19 @@ Below an overview of all Elastic components which help you to setup an Elastic S
 - Logstash ; *is our swiss knife for advanced indexing to Elasticsearch and complex ingesting of data sources like data queues.*
 - Kibana ; *is the key user interface component, which brings data & visualisations together on one or more beautiful dashboards.*
 - Beats ; *is the family name for many lightweight data shippers like MetricBeat, FileBeat, WinlogBeat, PacketBeat and HeartBeat. For diehards we have LibBeat to brew your own GoLang.*
-- Optional X-Pack ; *Adds amazing features like Security, Monitoring, Reporting, Graph or even Machine Learning capabilities.*
+- Optional X-Pack ; *Adds amazing features like Security, Alerting, Monitoring, Reporting, Graph or even Machine Learning capabilities.*
 - Optional Elastic Cloud ; *This is the hosted variant for currently Elasticsearch and Kibana. New release will include Logstash.*
+
+## Training materials:
 
 *This will be a self-paced beginners’ tutorial for attendees to learn Elastic basics as they install the components within their VirtualBox. Experienced Devoteam colleagues will serve as support to help attendees successfully complete this tutorial.*
 
 :warning: **This section prepares you for the introduction before you actually attend.**
 
+## Pre-tutorial preparation
+
+At the KES/KISS, you will need to bring your own computer. Before you go to the KES/KISS, there are some steps you should do some preparation to get your work environment ready. Here are the steps:
+- For PC, Mac and Linux users we need you to install the latest version of [VirtualBox](https://www.virtualbox.org/wiki/Linux_Downloads).
 
 
 
