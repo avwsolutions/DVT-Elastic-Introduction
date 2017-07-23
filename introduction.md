@@ -42,7 +42,7 @@ OpenJDK 64-Bit Server VM (build 25.91-b14, mixed mode)
 
 ### Installation Elasticsearch
 
-First step is to to get introduced to [Elasticsearch] (https://www.elastic.co/products/elasticsearch)
+First step is to to get introduced to [Elasticsearch](https://www.elastic.co/products/elasticsearch)
 
 > Note : Be aware that for this task internet connectivity is needed. For convenience the Elastic repository is configured and there is already a cache yum download available.
 
