@@ -75,9 +75,11 @@ $ sudo /bin/systemctl daemon-reload
 $ sudo /bin/systemctl enable elasticsearch.service
 
 # Now we can stop & start the daemon
-sudo systemctl stop elasticsearch.service
-sudo systemctl start elasticsearch.service
+$ sudo systemctl stop elasticsearch.service
+$ sudo systemctl start elasticsearch.service
 ```
+
+
 
 
 
