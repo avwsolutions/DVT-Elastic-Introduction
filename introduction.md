@@ -2,10 +2,15 @@
 
 <img src="https://raw.githubusercontent.com/avwsolutions/DVT-Elastic-Introduction/master/content/banner.png" alt="introduction banner">
 
-Elastic Stack consists of Elasticsearch, Logstash, Kibana and Beats.
+Elastic Stack architecture is shown below.
 
 <img src="https://raw.githubusercontent.com/avwsolutions/DVT-Elastic-Introduction/master/content/elastic_stack.png" alt="Elastic stack">
 
+- Elasticsearch
+- Logstash
+- Kibana
+- Beats
+- Optional Elastic Cloud
 
 are the most popular tools for analyzing your logs and metrics. Almost every company has one of these tools running, with various use cases like big data, analytics or just monitoring.
 In this hands-on workshop the student learns the fundamental skills needed to understand the concepts en start creating their Monitoring configuration. 
