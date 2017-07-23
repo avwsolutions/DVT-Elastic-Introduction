@@ -68,6 +68,16 @@ Below you will find the command for installing elasticsearch.
 $ sudo yum -y install elasticsearch
 ```
 
+Now use the following commands to automatically start the daemon at startup.
+
+```
+$ sudo /bin/systemctl daemon-reload
+$ sudo /bin/systemctl enable elasticsearch.service
+
+# Now we can stop & start the daemon
+sudo systemctl stop elasticsearch.service
+sudo systemctl start elasticsearch.service
+```
 
 
 
