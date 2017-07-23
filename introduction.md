@@ -124,7 +124,7 @@ $ sudo systemctl stop kibana.service
 $ sudo systemctl start kibana.service
 ```
 
-### Installation Logstash
+### Installation Beats
 
 First step is to to get introduced to [Beats](https://www.elastic.co/products/beats)
 
@@ -149,6 +149,8 @@ $ sudo systemctl start metricbeat.service
 $ sudo systemctl stop filebeat.service
 $ sudo systemctl start filebeat.service
 ```
+### Importing default dashboards
 
+### Create basic configuration
 
 
