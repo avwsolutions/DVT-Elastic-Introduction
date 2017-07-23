@@ -2,7 +2,7 @@
 
 <img src="https://raw.githubusercontent.com/avwsolutions/DVT-Elastic-Introduction/master/content/banner.png" alt="introduction banner">
 
-Elastic Stack architecture is shown below.
+Below an overview of all Elastic components which help you to setup an Elastic Stack. Most familiar is using Elastic-Logstash-Kibana and additional Beats agents. if the customer buys support additional features can be added such as Security (Shield), Monitoring (Marvel, Alerting (Watcher) and Reporting. Other nice kick-ass features for Platinum and Enterprise are Graph and Machine Learning (Prelert).
 
 <img src="https://raw.githubusercontent.com/avwsolutions/DVT-Elastic-Introduction/master/content/elastic_stack.png" alt="Elastic stack">
 
@@ -10,10 +10,7 @@ Elastic Stack architecture is shown below.
 - Logstash
 - Kibana
 - Beats
+- Optional X-Pack
 - Optional Elastic Cloud
 
-are the most popular tools for analyzing your logs and metrics. Almost every company has one of these tools running, with various use cases like big data, analytics or just monitoring.
-In this hands-on workshop the student learns the fundamental skills needed to understand the concepts en start creating their Monitoring configuration. 
-Main topics that are covered are setting up your logstash configuration for log parsing, enabling metric gathering with Graphite (i.e. Collectd) and finally create some awesome dashboards.
-The hands-on workshop is fully scenario based, including helpful lab exercises, sample code and a prepared Vagrant Box running on Linux.
-To run the Vagrant Box in Virtual Box a minimum of 2 GB memory or better is preferred."
+
