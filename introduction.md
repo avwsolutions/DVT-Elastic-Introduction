@@ -6,11 +6,13 @@ Below an overview of all Elastic components which help you to setup an Elastic S
 
 <img src="https://raw.githubusercontent.com/avwsolutions/DVT-Elastic-Introduction/master/content/elastic_stack.png" alt="Elastic stack">
 
-- Elasticsearch
-- Logstash
-- Kibana
-- Beats
-- Optional X-Pack
-- Optional Elastic Cloud
+- Elasticsearch ; is our lucene search enabled document store, for indexing and analysing our data.
+- Logstash ; is our swiss knife for advanced indexing to Elasticsearch and complex ingesting of data sources like data queues.
+- Kibana ; is the key user interface component, which brings data & visualisations together on one or more beautiful dashboards.
+- Beats ; is the family name for many lightweight data shippers like MetricBeat, FileBeat, WinlogBeat, PacketBeat and HeartBeat. For diehards we have LibBeat to brew your own GoLang.
+- Optional X-Pack ; Adds amazing features like Security, Monitoring, Reporting, Graph or even Machine Learning capabilities.
+- Optional Elastic Cloud ; This is the hosted variant for currently Elasticsearch and Kibana. New release will include Logstash.
+
+
 
 
