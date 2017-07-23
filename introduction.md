@@ -4,7 +4,7 @@
 
 Elastic Stack consists of Elasticsearch, Logstash, Kibana and Beats.
 
-<img src="https://raw.githubusercontent.com/avwsolutions/DVT-Elastic-Introduction/master/content/es_stack.png" alt="Elastic stack">
+<img src="https://raw.githubusercontent.com/avwsolutions/DVT-Elastic-Introduction/master/content/elastic_stack.png" alt="Elastic stack">
 
 
 are the most popular tools for analyzing your logs and metrics. Almost every company has one of these tools running, with various use cases like big data, analytics or just monitoring.
