@@ -151,6 +151,6 @@ $ sudo systemctl start filebeat.service
 ```
 ### Importing default dashboards
 
-### Create basic configuration
+### Modify basic configuration
 
-
+### Installation X-Pack
