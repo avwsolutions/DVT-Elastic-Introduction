@@ -22,7 +22,7 @@ Below an overview of all Elastic components which help you to setup an Elastic S
 ## Pre-tutorial preparation
 
 At the KES/KISS, you will need to bring your own computer. Before you go to the KES/KISS, there are some steps you should do some preparation to get your work environment ready. Here are the steps:
-- For PC, Mac and Linux users we need you to install the latest version of [VirtualBox](https://www.virtualbox.org/wiki/Linux_Downloads).
+- For PC, Mac and Linux users we need you to install the latest version of [VirtualBox](https://www.virtualbox.org/Downloads).
 
 
 
