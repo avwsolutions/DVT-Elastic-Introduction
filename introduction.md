@@ -79,7 +79,28 @@ $ sudo systemctl stop elasticsearch.service
 $ sudo systemctl start elasticsearch.service
 ```
 
+### Installation Logstash
 
+First step is to to get introduced to [Logstash](https://www.elastic.co/products/logstash)
+
+> Note : Be aware that for this task internet connectivity is needed. For convenience the Elastic repository is configured and there is already a cache yum download available.
+
+Below you will find the command for installing logstash. 
+
+```
+$ sudo yum -y install logstash
+```
+
+Now use the following commands to automatically start the daemon at startup.
+
+```
+$ sudo /bin/systemctl daemon-reload
+$ sudo /bin/systemctl enable logstash.service
+
+# Now we can stop & start the daemon
+$ sudo systemctl stop logstash.service
+$ sudo systemctl start logstash.service
+```
 
 
 
