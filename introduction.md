@@ -101,9 +101,54 @@ $ sudo /bin/systemctl enable logstash.service
 $ sudo systemctl stop logstash.service
 $ sudo systemctl start logstash.service
 ```
+### Installation Kibana
 
+First step is to to get introduced to [Kibana](https://www.elastic.co/products/kibana)
 
+> Note : Be aware that for this task internet connectivity is needed. For convenience the Elastic repository is configured and there is already a cache yum download available.
 
+Below you will find the command for installing logstash. 
+
+```
+$ sudo yum -y install kibana
+```
+
+Now use the following commands to automatically start the daemon at startup.
+
+```
+$ sudo /bin/systemctl daemon-reload
+$ sudo /bin/systemctl enable kibana.service
+
+# Now we can stop & start the daemon
+$ sudo systemctl stop kibana.service
+$ sudo systemctl start kibana.service
+```
+
+### Installation Logstash
+
+First step is to to get introduced to [Beats](https://www.elastic.co/products/beats)
+
+> Note : Be aware that for this task internet connectivity is needed. For convenience the Elastic repository is configured and there is already a cache yum download available.
+
+Below you will find the command for installing filebeat and metricbeat. 
+
+```
+$ sudo yum -y install filebeat metricbeat
+
+```
+
+Now use the following commands to automatically start the daemon at startup.
+
+```
+$ sudo /bin/systemctl daemon-reload
+$ sudo /bin/systemctl enable filebeat.service metricbeat.service
+
+# Now we can stop & start the daemon
+$ sudo systemctl stop metricbeat.service
+$ sudo systemctl start metricbeat.service
+$ sudo systemctl stop filebeat.service
+$ sudo systemctl start filebeat.service
+```
 
 
 
