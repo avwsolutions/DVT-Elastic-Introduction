@@ -280,6 +280,16 @@ security manager nor to system call filters.
 Continue with installation? [y/N]y
 -> Installed x-pack
 
+$ /usr/share/kibana/bin/kibana-plugin install x-pack
+Attempting to transfer from x-pack
+Attempting to transfer from https://artifacts.elastic.co/downloads/kibana-plugins/x-pack/x-pack-5.5.0.zip
+Transferring 119276235 bytes....................
+Transfer complete
+Retrieving metadata from plugin archive
+Extracting plugin archive
+Extraction complete
+Optimizing and caching browser bundles...
+Plugin installation complete
 ```
 Now update your */etc/logstash/conf.d/logstash.conf* with two additional parameters for the elasticsearch output plugin. Common practice is to create a separate user for logstash, but in the current Introduction we use the default credentials.
 
