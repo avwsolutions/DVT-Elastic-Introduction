@@ -152,10 +152,32 @@ Now use the following commands to automatically start the daemon at startup.
 $ sudo /bin/systemctl daemon-reload
 $ sudo /bin/systemctl enable kibana.service
 
+```
+Now edit the configuration file and add a acces rule to enable external access from your laptop. In our case through NAT forwarding to port 5601.
+
+```
+$ vi /etc/kibana/kibana.yml
+
+# Now change 'localhost' to 0.0.0.0 and save kibana.yml.
+
+# Specifies the address to which the Kibana server will bind. IP addresses and host names are both valid values.
+# The default is 'localhost', which usually means remote machines will not be able to connect.
+# To allow connections from remote users, set this parameter to a non-loopback address.
+server.host: 0.0.0.0
+
+$ firewall-cmd --add-port 5601/tcp
+success
+$ firewall-cmd --reload
+
+```
+
+```
 # Now we can stop & start the daemon
 $ sudo systemctl stop kibana.service
 $ sudo systemctl start kibana.service
 ```
+> Note : You can now acces the kibana user interface on [Kibana](http://127.0.0.1:5601)
+
 
 ### Installation Beats
 
