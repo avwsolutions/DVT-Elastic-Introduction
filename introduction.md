@@ -165,7 +165,7 @@ $ vi /etc/kibana/kibana.yml
 # To allow connections from remote users, set this parameter to a non-loopback address.
 server.host: 0.0.0.0
 
-$ firewall-cmd --add-port 5601/tcp
+$ firewall-cmd --permanent --add-port 5601/tcp
 success
 $ firewall-cmd --reload
 
@@ -176,7 +176,7 @@ $ firewall-cmd --reload
 $ sudo systemctl stop kibana.service
 $ sudo systemctl start kibana.service
 ```
-> Note : You can now acces the kibana user interface on [Kibana](http://127.0.0.1:5601)
+> Note : You can now acces the kibana user interface on [Kibana](http://127.0.0.1:5601), but keep in mind no events are received yet.
 
 
 ### Installation Beats
