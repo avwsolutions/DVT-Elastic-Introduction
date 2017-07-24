@@ -198,6 +198,22 @@ Now use the following commands to automatically start the daemon at startup.
 $ sudo /bin/systemctl daemon-reload
 $ sudo /bin/systemctl enable filebeat.service metricbeat.service
 
+```
+For this simple configuration we just replace the elasticsearch output for the logstash output for both filebeat and metricbeat. Please take in account the YAML format e.g. 2 spaces.
+
+```
+#disable output.elasticsearch
+#output.elasticsearch:
+  # Array of hosts to connect to.
+  #hosts: ["localhost:9200"]
+
+#enable output.logstash
+output.logstash:
+  # The Logstash hosts
+  hosts: ["localhost:5044"]
+  
+  ```
+
 # Now we can stop & start the daemon
 $ sudo systemctl stop metricbeat.service
 $ sudo systemctl start metricbeat.service
