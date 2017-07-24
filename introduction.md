@@ -129,6 +129,7 @@ And validate.
 $ /usr/share/logstash/bin/logstash --path.settings /etc/logstash/ -t
 ```
 
+```
 # Now we can stop & start the daemon
 $ sudo systemctl stop logstash.service
 $ sudo systemctl start logstash.service
