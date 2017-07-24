@@ -25,7 +25,7 @@ At the KES/KISS, you will need to bring your own computer. Before you go to the 
 - For PC, Mac and Linux users we need you to install the latest version of [VirtualBox](https://www.virtualbox.org/wiki/Downloads).
 - Use the following installation instructions for [Windows] (https://www.virtualbox.org/manual/ch02.html#installation_windows).
 - Now download the following OVA file, which delivers a fully functional CentOS 7.0 (minimal - No GUI) installation.
-- Use PuTTY or any other compatible SSH client to connect to the terminal interface using 127.0.0.1, port 2222.
+- Use PuTTY or any other compatible SSH client to connect to the terminal interface using 127.0.0.1, port 2222. As user account use the 'elastic' account.
 
 ## Introduction tutorial starts here
 
@@ -231,6 +231,66 @@ $ sudo systemctl start filebeat.service
 ```
 ### Importing default dashboards
 
-### Modify basic configuration
+Now the first logs & metrics are flooding into your stack. Now it's time to create your index patterns.
 
+- Use filebeat-\* for filebeat and use @timestamp for Time Filter field name.
+- Use metricbeat-\* for metricbeat and use @timestamp for Time Filter field name.
+
+We can also import some default dashboards, which is simply done with one command. 
+
+```
+$ /usr/share/filebeat/scripts/import_dashboards
+$ /usr/share/metricbeat/scripts/import_dashboards
+```
 ### Installation X-Pack
+
+X-pack can be easily installed with the following commands and must be installed for both elasticsearch and kibana. Don't forget to restart the daemons.
+
+:warning:Be aware that after installation minimal security is activated. This forces us to login with the default username:elastic and password:changeme. 
+
+```
+$ /usr/share/elasticsearch/bin/elasticsearch-plugin install x-pack
+-> Downloading x-pack from elastic
+[=================================================] 100%?? 
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@     WARNING: plugin requires additional permissions     @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+* java.io.FilePermission \\.\pipe\* read,write
+* java.lang.RuntimePermission accessClassInPackage.com.sun.activation.registries
+* java.lang.RuntimePermission getClassLoader
+* java.lang.RuntimePermission setContextClassLoader
+* java.lang.RuntimePermission setFactory
+* java.security.SecurityPermission createPolicy.JavaPolicy
+* java.security.SecurityPermission getPolicy
+* java.security.SecurityPermission putProviderProperty.BC
+* java.security.SecurityPermission setPolicy
+* java.util.PropertyPermission * read,write
+* java.util.PropertyPermission sun.nio.ch.bugLevel write
+* javax.net.ssl.SSLPermission setHostnameVerifier
+See http://docs.oracle.com/javase/8/docs/technotes/guides/security/permissions.html
+for descriptions of what these permissions allow and the associated risks.
+
+Continue with installation? [y/N]y
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@        WARNING: plugin forks a native controller        @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+This plugin launches a native controller that is not subject to the Java
+security manager nor to system call filters.
+
+Continue with installation? [y/N]y
+-> Installed x-pack
+
+```
+Now update your */etc/logstash/conf.d/logstash.conf* with two additional parameters for the elasticsearch output plugin. Common practice is to create a separate user for logstash, but in the current Introduction we use the default credentials.
+
+```
+user => "elastic"
+password => "changeme"
+```
+
+### Additional X-Pack features
+
+Now that you have installed X-Pack you can setup some nice example configurations for Graph, Alerting or even Machine Learning. All these examples are available at [Github](https://github.com/elastic/examples) and for convinience cloned to the elastic user home directory.
+
+
+
