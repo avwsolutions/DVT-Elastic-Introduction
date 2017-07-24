@@ -98,6 +98,37 @@ Now use the following commands to automatically start the daemon at startup.
 $ sudo /bin/systemctl daemon-reload
 $ sudo /bin/systemctl enable logstash.service
 
+```
+
+Now create some simple configuration for logstash.
+
+```
+input {
+  beats {
+    # The port to listen on for filebeat connections.
+    port => 5044
+    # The IP address to listen for filebeat connections.
+    host => "0.0.0.0"
+  }
+}
+filter {
+
+}
+output {
+  elasticsearch {
+    hosts => localhost
+    manage_template => false
+    index => "%{[@metadata][beat]}-%{+YYYY.MM.dd}"
+    document_type => "%{[@metadata][type]}"
+  }
+}
+```
+And validate.
+
+```
+$ /usr/share/logstash/bin/logstash --path.settings /etc/logstash/ -t
+```
+
 # Now we can stop & start the daemon
 $ sudo systemctl stop logstash.service
 $ sudo systemctl start logstash.service
