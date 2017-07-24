@@ -212,7 +212,15 @@ output.logstash:
   # The Logstash hosts
   hosts: ["localhost:5044"]
   
-  ```
+```
+Now load the correct templates for both filebeat and metricbeat
+
+```
+$ curl -XPUT 'http://localhost:9200/_template/filebeat' -d@/etc/filebeat/filebeat.template.json
+{"acknowledged":true}
+$ curl -XPUT 'http://localhost:9200/_template/metricbeat' -d@/etc/metricbeat/metricbeat.template.json
+{"acknowledged":true}
+```
 
 ```
 # Now we can stop & start the daemon
