@@ -25,6 +25,7 @@ At the KES/KISS, you will need to bring your own computer. Before you go to the 
 - For PC, Mac and Linux users we need you to install the latest version of [VirtualBox](https://www.virtualbox.org/wiki/Downloads).
 - Use the following installation instructions for [Windows] (https://www.virtualbox.org/manual/ch02.html#installation_windows).
 - Now download the following OVA file, which delivers a fully functional CentOS 7.0 (minimal - No GUI) installation.
+- Use PuTTY or any other compatible SSH client to connect to the terminal interface using 127.0.0.1, port 2222.
 
 ## Introduction tutorial starts here
 
@@ -35,9 +36,9 @@ Below you will find the commands for installing the openJDK JRE and checking if 
 ```
 $ sudo yum -y install jre
 $ sudo java -version
-openjdk version "1.8.0_91"
-OpenJDK Runtime Environment (build 1.8.0_91-b14)
-OpenJDK 64-Bit Server VM (build 25.91-b14, mixed mode)
+openjdk version "1.8.0_141"
+OpenJDK Runtime Environment (build 1.8.0_141-b16)
+OpenJDK 64-Bit Server VM (build 25.141-b16, mixed mode)
 ```
 
 ### Installation Elasticsearch
