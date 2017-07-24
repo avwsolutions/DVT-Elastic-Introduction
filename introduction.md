@@ -214,6 +214,7 @@ output.logstash:
   
   ```
 
+```
 # Now we can stop & start the daemon
 $ sudo systemctl stop metricbeat.service
 $ sudo systemctl start metricbeat.service
